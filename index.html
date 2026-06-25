@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rakün Visual Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================================================
+     BLOBS DE FONDO
+     =================================================== -->
+<div class="blob-bg" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- ===================================================
+     NAVEGACIÓN
+     =================================================== -->
+<nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+  <a href="#inicio" class="nav-logo">RAK<span>Ü</span>N</a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks" role="list">
+    <li><a href="#trabajo" onclick="closeNav()">Trabajo</a></li>
+    <li><a href="#planes" onclick="closeNav()">Planes</a></li>
+    <li><a href="#nosotros" onclick="closeNav()">Nosotros</a></li>
+  </ul>
+</nav>
+
+<!-- ===================================================
+     WA FLOTANTE (único botón de WhatsApp del sitio)
+     =================================================== -->
+<a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20más%20información"
+   target="_blank" rel="noopener"
+   class="wa-float"
+   aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.522 5.843L0 24l6.337-1.499A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.6 9.6 0 01-4.857-1.316l-.35-.207-3.623.857.892-3.527-.226-.361A9.6 9.6 0 1112 21.6z"/>
+  </svg>
+</a>
+
+<!-- ===================================================
+     HERO
+     =================================================== -->
+<section id="inicio" class="hero">
+  <div class="hero-placeholder" aria-hidden="true"></div>
+  <!--
+    Para activar el showreel de fondo, descomenta esto y reemplaza VIDEO_ID:
+    <div class="hero-video-bg">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&showinfo=0"
+              frameborder="0" allow="autoplay" title="Rakün Showreel"></iframe>
+    </div>
+  -->
+  <div class="hero-content">
+    <p class="hero-eyebrow">Productora audiovisual · Pereira, Colombia</p>
+    <h1 class="hero-title">
+      <span>Hacemos</span>
+      <span class="line-pink">que tu</span>
+      <span class="line-blue">historia</span>
+      <span>mueva</span>
+    </h1>
+    <p class="hero-sub">Edición de video, videoclips, documentales y contenido para redes con cámaras de alta gama y visión cinematográfica.</p>
+    <div class="hero-ctas">
+      <a href="#trabajo" class="btn btn-primary">Ver nuestro trabajo</a>
+      <a href="#planes" class="btn btn-outline">Conocer los planes</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+
+<!-- ===================================================
+     TRABAJO
+     =================================================== -->
+<section id="trabajo" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Portafolio</p>
+      <h2 class="section-title">Nuestro <em>trabajo</em></h2>
+      <p class="section-desc">Elegí una categoría para ver el carrusel de proyectos.</p>
+    </div>
+
+    <!-- ============================================
+         3 categorías
+         ============================================ -->
+    <div class="work-categories reveal" id="workCategories" role="tablist" aria-label="Categorías de trabajo">
+
+      <button class="work-cat-card active" data-category="reels" role="tab" aria-selected="true" aria-controls="carousel-reels">
+        <div class="work-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-pink)" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M9 6h.01M9 18h.01"/></svg>
+        </div>
+        <p class="work-cat-name">Reels</p>
+        <p class="work-cat-count">10 espacios</p>
+        <p class="work-cat-desc">Contenido corto para Instagram, TikTok y YouTube Shorts.</p>
+      </button>
+
+      <button class="work-cat-card" data-category="youtube" role="tab" aria-selected="false" aria-controls="carousel-youtube">
+        <div class="work-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-blue)" stroke-width="1.6" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="var(--color-blue)"/></svg>
+        </div>
+        <p class="work-cat-name">YouTube</p>
+        <p class="work-cat-count">10 espacios</p>
+        <p class="work-cat-desc">Long form, documentales y series para YouTube.</p>
+      </button>
+
+      <button class="work-cat-card" data-category="cine" role="tab" aria-selected="false" aria-controls="carousel-cine">
+        <div class="work-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-yellow)" stroke-width="1.6" aria-hidden="true"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+        </div>
+        <p class="work-cat-name">Cinematográfico</p>
+        <p class="work-cat-count">6 espacios</p>
+        <p class="work-cat-desc">Videoclips, cortometrajes y piezas cinematográficas.</p>
+      </button>
+
+    </div>
+
+    <!-- ============================================
+         Carrusel REELS (10 espacios)
+         Para agregar un video: dentro del work-slide,
+         reemplazá el <div class="work-slide-empty">...</div>
+         por: <iframe src="https://www.youtube.com/embed/TU_ID" allowfullscreen></iframe>
+         ============================================ -->
+    <div class="work-carousel-wrap open" id="carousel-reels" role="tabpanel">
+      <div class="work-carousel-header">
+        <p class="work-carousel-title">Carrusel · <em>Reels</em></p>
+        <div class="work-carousel-nav">
+          <button class="work-carousel-btn" data-dir="-1" data-target="reels" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="work-carousel-btn" data-dir="1" data-target="reels" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="work-carousel-track-outer">
+        <div class="work-carousel-track" id="track-reels">
+          <!-- Reel 1 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 1
+            </div>
+          </div>
+          <!-- Reel 2 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 2
+            </div>
+          </div>
+          <!-- Reel 3 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 3
+            </div>
+          </div>
+          <!-- Reel 4 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 4
+            </div>
+          </div>
+          <!-- Reel 5 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 5
+            </div>
+          </div>
+          <!-- Reel 6 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 6
+            </div>
+          </div>
+          <!-- Reel 7 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 7
+            </div>
+          </div>
+          <!-- Reel 8 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 8
+            </div>
+          </div>
+          <!-- Reel 9 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 9
+            </div>
+          </div>
+          <!-- Reel 10 -->
+          <div class="work-slide is-reel">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reel 10
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-carousel-dots" id="dots-reels"></div>
+    </div>
+
+    <!-- ============================================
+         Carrusel YOUTUBE (10 espacios)
+         ============================================ -->
+    <div class="work-carousel-wrap" id="carousel-youtube" role="tabpanel">
+      <div class="work-carousel-header">
+        <p class="work-carousel-title">Carrusel · <em>YouTube</em></p>
+        <div class="work-carousel-nav">
+          <button class="work-carousel-btn" data-dir="-1" data-target="youtube" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="work-carousel-btn" data-dir="1" data-target="youtube" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="work-carousel-track-outer">
+        <div class="work-carousel-track" id="track-youtube">
+          <!-- YouTube 1 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 1
+            </div>
+          </div>
+          <!-- YouTube 2 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 2
+            </div>
+          </div>
+          <!-- YouTube 3 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 3
+            </div>
+          </div>
+          <!-- YouTube 4 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 4
+            </div>
+          </div>
+          <!-- YouTube 5 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 5
+            </div>
+          </div>
+          <!-- YouTube 6 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 6
+            </div>
+          </div>
+          <!-- YouTube 7 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 7
+            </div>
+          </div>
+          <!-- YouTube 8 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 8
+            </div>
+          </div>
+          <!-- YouTube 9 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 9
+            </div>
+          </div>
+          <!-- YouTube 10 -->
+          <div class="work-slide is-longform">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
+              YouTube 10
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-carousel-dots" id="dots-youtube"></div>
+    </div>
+
+    <!-- ============================================
+         Carrusel CINEMATOGRÁFICO (6 espacios)
+         ============================================ -->
+    <div class="work-carousel-wrap" id="carousel-cine" role="tabpanel">
+      <div class="work-carousel-header">
+        <p class="work-carousel-title">Carrusel · <em>Cinematográfico</em></p>
+        <div class="work-carousel-nav">
+          <button class="work-carousel-btn" data-dir="-1" data-target="cine" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="work-carousel-btn" data-dir="1" data-target="cine" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="work-carousel-track-outer">
+        <div class="work-carousel-track" id="track-cine">
+          <!-- Cine 1 -->
+          <div class="work-slide is-cine">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+              Cine 1
+            </div>
+          </div>
+          <!-- Cine 2 -->
+          <div class="work-slide is-cine">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+              Cine 2
+            </div>
+          </div>
+          <!-- Cine 3 -->
+          <div class="work-slide is-cine">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+              Cine 3
+            </div>
+          </div>
+          <!-- Cine 4 -->
+          <div class="work-slide is-cine">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+              Cine 4
+            </div>
+          </div>
+          <!-- Cine 5 -->
+          <div class="work-slide is-cine">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+              Cine 5
+            </div>
+          </div>
+          <!-- Cine 6 -->
+          <div class="work-slide is-cine">
+            <!-- VACÍO: pegá aquí tu <iframe> de YouTube -->
+            <div class="work-slide-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+              Cine 6
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-carousel-dots" id="dots-cine"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================
+     PLANES / CALCULADORA
+     =================================================== -->
+<section id="planes" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Planes y precios</p>
+      <h2 class="section-title">Armá <em>tu plan</em></h2>
+      <p class="section-desc">Elegí uno de nuestros planes mensuales o armá el tuyo a medida con la calculadora.</p>
+    </div>
+
+    <!-- ============================================
+         3 PLANES PREDETERMINADOS
+         ============================================ -->
+    <div class="plans-fixed-grid">
+
+      <!-- Plan Básico -->
+      <div class="plan-card reveal">
+        <p class="plan-card-name">Plan Básico</p>
+        <p class="plan-card-tagline">Para empezar a moverte en redes.</p>
+
+        <div class="plan-card-groups">
+          <div>
+            <p class="plan-card-group-label">Creación de contenido</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Grabación y edición de 4 reels mensuales</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Diseño de 4 posts (carrusel o imagen fija)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Viáticos de equipo de realización</li>
+            </ul>
+          </div>
+          <div>
+            <p class="plan-card-group-label">Community management</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Parrilla de contenidos + copys con estrategia de venta</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Programación y publicación en IG / FB / TikTok</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Gestión básica de comentarios + informe mensual</li>
+            </ul>
+          </div>
+          <div>
+            <p class="plan-card-group-label">Gestión de la pauta</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Creación de perfiles y campañas en Facebook Ads (Meta)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Monitoreo, entrega de leads semanal e informe mensual</li>
+            </ul>
+            <p class="plan-card-note">El valor de la pauta no está incluido; se sugiere mínimo $600.000/mes.</p>
+          </div>
+        </div>
+
+        <div class="plan-card-price-row">
+          <p class="plan-card-before">Antes $2.050.000</p>
+          <p class="plan-card-total"><span class="currency">$</span>1.850.000</p>
+          <p class="plan-card-permonth">Pago mensual · libre de impuestos y retenciones</p>
+          <button class="btn btn-outline plan-card-cta" onclick="openContact('Plan Básico')">Quiero este plan</button>
+        </div>
+      </div>
+
+      <!-- Plan Intermedio (destacado) -->
+      <div class="plan-card featured reveal reveal-delay-1">
+        <span class="plan-card-badge">Más elegido</span>
+        <p class="plan-card-name">Plan Intermedio</p>
+        <p class="plan-card-tagline">Más contenido, más presencia.</p>
+
+        <div class="plan-card-groups">
+          <div>
+            <p class="plan-card-group-label">Creación de contenido</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Grabación y edición de 8 reels mensuales</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Diseño de 6 posts (carrusel o imagen fija)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Viáticos de equipo de realización</li>
+            </ul>
+          </div>
+          <div>
+            <p class="plan-card-group-label">Community management</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Parrilla de contenidos + copys con estrategia de venta</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Programación y publicación en IG / FB / TikTok</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Gestión básica de comentarios + informe mensual</li>
+            </ul>
+          </div>
+          <div>
+            <p class="plan-card-group-label">Gestión de la pauta</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Creación de perfiles y campañas en Facebook Ads (Meta)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Monitoreo, entrega de leads semanal e informe mensual</li>
+            </ul>
+            <p class="plan-card-note">El valor de la pauta no está incluido; se sugiere mínimo $600.000/mes.</p>
+          </div>
+        </div>
+
+        <div class="plan-card-price-row">
+          <p class="plan-card-before">Antes $3.450.000</p>
+          <p class="plan-card-total"><span class="currency">$</span>2.950.000</p>
+          <p class="plan-card-permonth">Pago mensual · libre de impuestos y retenciones</p>
+          <button class="btn btn-primary plan-card-cta" onclick="openContact('Plan Intermedio')">Quiero este plan</button>
+        </div>
+      </div>
+
+      <!-- Plan Premium -->
+      <div class="plan-card reveal reveal-delay-2">
+        <p class="plan-card-name">Plan Premium</p>
+        <p class="plan-card-tagline">Máxima presencia, todo el mes.</p>
+
+        <div class="plan-card-groups">
+          <div>
+            <p class="plan-card-group-label">Creación de contenido</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Grabación y edición de 13 reels mensuales</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Diseño de 8 posts (carrusel o imagen fija)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Viáticos de equipo de realización</li>
+            </ul>
+          </div>
+          <div>
+            <p class="plan-card-group-label">Community management</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Parrilla de contenidos + copys con estrategia de venta</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Programación y publicación en IG / FB / TikTok</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Gestión básica de comentarios + informe mensual</li>
+            </ul>
+          </div>
+          <div>
+            <p class="plan-card-group-label">Gestión de la pauta</p>
+            <ul class="plan-card-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Creación de perfiles y campañas en Facebook Ads (Meta)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Monitoreo, entrega de leads semanal e informe mensual</li>
+            </ul>
+            <p class="plan-card-note">El valor de la pauta no está incluido; se sugiere mínimo $600.000/mes.</p>
+          </div>
+        </div>
+
+        <div class="plan-card-price-row">
+          <p class="plan-card-before">Antes $5.200.000</p>
+          <p class="plan-card-total"><span class="currency">$</span>3.900.000</p>
+          <p class="plan-card-permonth">Pago mensual · libre de impuestos y retenciones</p>
+          <button class="btn btn-outline plan-card-cta" onclick="openContact('Plan Premium')">Quiero este plan</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="plans-divider reveal">¿Ninguno se ajusta del todo?</p>
+
+    <div class="section-header reveal" style="margin-bottom: var(--space-md);">
+      <p class="section-tag">A tu medida</p>
+      <h3 class="section-title" style="font-size: var(--size-h2);">Personaliza <em>tu plan</em></h3>
+      <p class="section-desc">Elegí solo lo que necesitás y mirá el precio en tiempo real.</p>
+    </div>
+
+    <div class="planes-grid">
+      <!-- Calculadora -->
+      <div class="calc-panel reveal">
+        <p class="calc-title">¿Qué necesitás?</p>
+
+        <!-- Reels -->
+        <div class="calc-group">
+          <div class="calc-group-head">
+            <span class="calc-group-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+              Reels
+            </span>
+            <span class="calc-group-price" id="reelPriceTag">$80.000 c/u</span>
+          </div>
+          <div class="calc-counter">
+            <button class="calc-counter-btn" data-counter="reels" data-delta="-1" aria-label="Quitar reel">−</button>
+            <span class="calc-counter-num" id="reelsCount">0</span>
+            <button class="calc-counter-btn" data-counter="reels" data-delta="1" aria-label="Agregar reel">+</button>
+            <span class="calc-counter-unit">reels / mes</span>
+          </div>
+          <div class="calc-level-row is-disabled" id="reelOptions">
+            <span class="calc-mini-label">Nivel de edición</span>
+            <div class="calc-toggle-group" role="group" aria-label="Nivel de edición de reels">
+              <button class="calc-toggle level active" data-group="reelLevel" data-value="basica">Básica</button>
+              <button class="calc-toggle level" data-group="reelLevel" data-value="avanzada">Avanzada</button>
+            </div>
+            <span class="calc-mini-label">Servicio</span>
+            <div class="calc-toggle-group" role="group" aria-label="Grabación de reels">
+              <button class="calc-toggle" data-group="reelRec" data-value="no">Solo edición</button>
+              <button class="calc-toggle active" data-group="reelRec" data-value="si">Grabación + edición</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Posts -->
+        <div class="calc-group">
+          <div class="calc-group-head">
+            <span class="calc-group-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+              Posts
+            </span>
+            <span class="calc-group-price">$60.000 c/u</span>
+          </div>
+          <div class="calc-counter">
+            <button class="calc-counter-btn" data-counter="posts" data-delta="-1" aria-label="Quitar post">−</button>
+            <span class="calc-counter-num" id="postsCount">0</span>
+            <button class="calc-counter-btn" data-counter="posts" data-delta="1" aria-label="Agregar post">+</button>
+            <span class="calc-counter-unit">posts / mes</span>
+          </div>
+        </div>
+
+        <!-- YouTube long form -->
+        <div class="calc-group">
+          <div class="calc-group-head">
+            <span class="calc-group-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M10 9l4 3-4 3z"/></svg>
+              YouTube long form
+            </span>
+            <span class="calc-group-price" id="ytPriceTag">$350.000 c/u</span>
+          </div>
+          <div class="calc-counter">
+            <button class="calc-counter-btn" data-counter="yt" data-delta="-1" aria-label="Quitar video">−</button>
+            <span class="calc-counter-num" id="ytCount">0</span>
+            <button class="calc-counter-btn" data-counter="yt" data-delta="1" aria-label="Agregar video">+</button>
+            <span class="calc-counter-unit">videos / mes</span>
+          </div>
+          <div class="calc-level-row is-disabled" id="ytOptions">
+            <span class="calc-mini-label">Nivel de edición</span>
+            <div class="calc-toggle-group" role="group" aria-label="Nivel de edición de YouTube">
+              <button class="calc-toggle level active" data-group="ytLevel" data-value="basica">Básica</button>
+              <button class="calc-toggle level" data-group="ytLevel" data-value="avanzada">Avanzada</button>
+            </div>
+            <span class="calc-mini-label">Servicio</span>
+            <div class="calc-toggle-group" role="group" aria-label="Grabación de YouTube">
+              <button class="calc-toggle" data-group="ytRec" data-value="no">Solo edición</button>
+              <button class="calc-toggle active" data-group="ytRec" data-value="si">Grabación + edición</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-divider"></div>
+
+        <!-- CM y pauta -->
+        <div class="calc-item">
+          <p class="calc-label" style="margin-bottom: 0.8rem;">Community management <span style="color:var(--color-muted); font-weight:400;">· $300.000/mes</span></p>
+          <div class="calc-toggle-group" role="group" aria-label="Community management">
+            <button class="calc-toggle active" data-group="cm" data-value="no">No incluir</button>
+            <button class="calc-toggle" data-group="cm" data-value="si">Agregar CM</button>
+          </div>
+        </div>
+
+        <div class="calc-item">
+          <p class="calc-label" style="margin-bottom: 0.8rem;">Gestión de pauta <span style="color:var(--color-muted); font-weight:400;">· $350.000/mes</span></p>
+          <div class="calc-toggle-group" role="group" aria-label="Gestión de pauta">
+            <button class="calc-toggle active" data-group="pauta" data-value="no">No incluir</button>
+            <button class="calc-toggle" data-group="pauta" data-value="si">Agregar gestión de pauta</button>
+          </div>
+          <p class="plan-card-note" style="margin-top:0.6rem;">El valor de la pauta publicitaria no está incluido; se sugiere un mínimo de $600.000/mes aparte.</p>
+        </div>
+      </div>
+
+      <!-- Resultado -->
+      <div class="result-panel reveal reveal-delay-2">
+        <p class="result-label">Tu plan estimado</p>
+        <div class="result-total" id="totalDisplay" aria-live="polite">
+          <span class="currency">$</span><span id="totalNum">0</span>
+        </div>
+        <p class="result-note">COP / mes · libre de impuestos y retenciones</p>
+
+        <div class="result-breakdown" id="breakdown" aria-label="Desglose del plan">
+          <div class="result-line" id="reelLine" style="display:none;">
+            <span id="reelLineLabel">Reels</span>
+            <strong id="reelCosto">$0</strong>
+          </div>
+          <div class="result-line" id="postLine" style="display:none;">
+            <span id="postLineLabel">Posts</span>
+            <strong id="postCosto">$0</strong>
+          </div>
+          <div class="result-line" id="ytLine" style="display:none;">
+            <span id="ytLineLabel">YouTube long form</span>
+            <strong id="ytCosto">$0</strong>
+          </div>
+          <div class="result-line" id="cmLine" style="display:none;">
+            <span>Community management</span>
+            <strong id="cmCosto">+$300.000</strong>
+          </div>
+          <div class="result-line" id="pautaLine" style="display:none;">
+            <span>Gestión de pauta</span>
+            <strong id="pautaCosto">+$350.000</strong>
+          </div>
+        </div>
+
+        <button class="btn btn-primary result-cta" onclick="openContact('Plan personalizado')" aria-label="Consultar este plan">
+          Consultar este plan
+        </button>
+        <p style="text-align:center; font-size:11px; color:var(--color-muted); margin-top:0.8rem;">
+          Precios referenciales · el presupuesto final depende del proyecto
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     NOSOTROS
+     =================================================== -->
+<section id="nosotros" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Nosotros</p>
+      <h2 class="section-title">Somos <em>Rakün</em></h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-placeholder">
+          <div class="about-logo-mark">Rkn</div>
+          <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-muted)">Foto del equipo</span>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <h3>Contamos <span>historias</span> que importan</h3>
+        <p>Somos una productora audiovisual con base en Pereira. Grabamos, editamos y producimos contenido para marcas, artistas y negocios que quieren comunicar con autenticidad.</p>
+        <p>Desde reels para redes hasta videoclips y documentales: contamos con los equipos, la visión y la experiencia para llevarlo al siguiente nivel.</p>
+        <div class="about-stats" role="list">
+          <div class="about-stat" role="listitem">
+            <span class="about-stat-num">+50</span>
+            <span class="about-stat-label">proyectos</span>
+          </div>
+          <div class="about-stat" role="listitem">
+            <span class="about-stat-num">3</span>
+            <span class="about-stat-label">años</span>
+          </div>
+          <div class="about-stat" role="listitem">
+            <span class="about-stat-num">4K</span>
+            <span class="about-stat-label">calidad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Equipos -->
+    <div class="section-header reveal" style="margin-top: var(--space-lg);">
+      <p class="section-tag">Capacidad técnica</p>
+      <h3 class="section-title" style="font-size: var(--size-h2);">Nuestros <em>equipos</em></h3>
+    </div>
+
+    <div class="equipo-grid reveal">
+      <div class="equipo-card">
+        <div class="equipo-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+        </div>
+        <div>
+          <p class="equipo-name">Cámara principal</p>
+          <p class="equipo-desc">Alta gama · Sensor full frame</p>
+        </div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+        </div>
+        <div>
+          <p class="equipo-name">Estabilizador Gimbal</p>
+          <p class="equipo-desc">Movimientos cinematográficos suaves</p>
+        </div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
+        </div>
+        <div>
+          <p class="equipo-name">Audio profesional</p>
+          <p class="equipo-desc">Micrófono shotgun · Lavalier</p>
+        </div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <div>
+          <p class="equipo-name">Iluminación LED</p>
+          <p class="equipo-desc">Kit completo · RGB y bicolor</p>
+        </div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div>
+          <p class="equipo-name">Edición profesional</p>
+          <p class="equipo-desc">Premiere Pro · After Effects · DaVinci</p>
+        </div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div>
+          <p class="equipo-name">Drone / Aéreo</p>
+          <p class="equipo-desc">Tomas aéreas cinematográficas</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clientes ticker -->
+    <div class="reveal" style="margin-top: var(--space-lg);">
+      <p class="section-tag" style="text-align:center; display:block; margin-bottom: var(--space-sm);">Han confiado en nosotros</p>
+      <div class="clients-ticker" role="marquee" aria-label="Marcas clientes">
+        <div class="clients-track" id="clientsTrack">
+          <!-- Primera copia -->
+          <span class="client-logo">Marca A</span>
+          <span class="client-logo">Marca B</span>
+          <span class="client-logo">Marca C</span>
+          <span class="client-logo">Marca D</span>
+          <span class="client-logo">Marca E</span>
+          <span class="client-logo">Marca F</span>
+          <!-- Segunda copia para loop infinito -->
+          <span class="client-logo" aria-hidden="true">Marca A</span>
+          <span class="client-logo" aria-hidden="true">Marca B</span>
+          <span class="client-logo" aria-hidden="true">Marca C</span>
+          <span class="client-logo" aria-hidden="true">Marca D</span>
+          <span class="client-logo" aria-hidden="true">Marca E</span>
+          <span class="client-logo" aria-hidden="true">Marca F</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     FOOTER
+     =================================================== -->
+<footer class="footer">
+  <div class="footer-cta">
+    <div class="container">
+      <h2 class="footer-cta-title reveal">
+        <span>Hable</span><br>
+        <em>mos</em>
+      </h2>
+      <div class="reveal reveal-delay-1">
+        <a href="#" onclick="openContact(); return false;" class="btn btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">
+          Empezar un proyecto
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-logo">RAK<span>Ü</span>N <span style="font-family:var(--font-body); font-size:0.7rem; font-weight:400; color:var(--color-muted); letter-spacing:0.1em;">VISUAL DESIGN</span></p>
+
+      <ul class="footer-links">
+        <li><a href="#trabajo">Trabajo</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+      </ul>
+
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram Rakün">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube Rakün">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok Rakün">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <p class="footer-copy" style="padding-top: var(--space-sm);">
+      © 2024 Rakün Visual Design · Pereira, Colombia
+    </p>
+  </div>
+</footer>
+
+<!-- ===================================================
+     FORMULARIO OVERLAY
+     =================================================== -->
+<div class="contact-overlay" id="contactOverlay" role="dialog" aria-modal="true" aria-label="Formulario de contacto">
+  <div class="contact-form">
+    <button class="contact-close" onclick="closeContact()" aria-label="Cerrar formulario">✕</button>
+    <h3 class="contact-h">Hablemos</h3>
+    <p class="contact-sub">Cuéntanos sobre tu proyecto y te contactamos en menos de 24h.</p>
+
+    <!--
+      ===========================================================
+      CONEXIÓN CON CORREO (rakundesigns@gmail.com)
+      ===========================================================
+      Este formulario usa Formspree (formspree.io) para enviar las
+      respuestas directamente a tu correo, sin necesidad de servidor.
+
+      PASOS PARA ACTIVARLO (5 minutos, gratis):
+      1. Entrá a https://formspree.io y creá una cuenta gratis con
+         rakundesigns@gmail.com
+      2. Creá un nuevo formulario ("New Form") y confirmá el correo
+         que te llega a esa casilla.
+      3. Formspree te va a dar una URL como:
+         https://formspree.io/f/abcd1234
+      4. Reemplazá "TU_ENDPOINT_DE_FORMSPREE" en el atributo
+         "action" del <form> de abajo por esa URL completa.
+      5. ¡Listo! Cada vez que alguien complete el formulario, te va
+         a llegar un correo a rakundesigns@gmail.com con toda la info.
+
+      El plan gratis de Formspree permite hasta 50 envíos al mes,
+      más que suficiente para empezar.
+      ===========================================================
+    -->
+    <form id="contactForm" action="https://formspree.io/f/TU_ENDPOINT_DE_FORMSPREE" method="POST">
+      <input type="hidden" name="_subject" value="Nueva consulta desde rakunvisualdesign.com">
+
+      <div class="form-field">
+        <label for="contactNombre">Tu nombre</label>
+        <input type="text" id="contactNombre" name="Nombre" placeholder="María García" autocomplete="name" required>
+      </div>
+      <div class="form-field">
+        <label for="contactEmail">Tu correo o WhatsApp</label>
+        <input type="text" id="contactEmail" name="Contacto" placeholder="maria@correo.com o +57 300 000 0000" autocomplete="email" required>
+      </div>
+      <div class="form-field">
+        <label for="contactNegocio">Tipo de negocio / proyecto</label>
+        <input type="text" id="contactNegocio" name="Negocio" placeholder="Restaurante, marca personal, artista...">
+      </div>
+      <div class="form-field">
+        <label for="contactServicio">¿Qué necesitás?</label>
+        <select id="contactServicio" name="Servicio">
+          <option value="">Seleccionar...</option>
+          <option>Reels para redes</option>
+          <option>Posts / diseño</option>
+          <option>Video para YouTube</option>
+          <option>Videoclip / cinematográfico</option>
+          <option>Community management</option>
+          <option>Gestión de pauta</option>
+          <option>Plan Básico</option>
+          <option>Plan Intermedio</option>
+          <option>Plan Premium</option>
+          <option>Plan personalizado</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="contactMensaje">Contanos más (opcional)</label>
+        <textarea id="contactMensaje" name="Mensaje" placeholder="Detalles de tu proyecto, presupuesto estimado, plan elegido..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:0.5rem;"
+              aria-label="Enviar consulta por correo">
+        Enviar consulta
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+    </form>
+
+    <p id="contactFormStatus" style="text-align:center; font-size:12px; color:var(--color-muted); margin-top:0.8rem; display:none;"></p>
+
+    <p style="text-align:center; font-size:12px; color:var(--color-muted); margin-top:1rem;">
+      ¿Preferís WhatsApp? <a href="https://wa.me/573000000000" target="_blank" rel="noopener" style="color:var(--color-pink); font-weight:700;">Escribinos directo</a>
+    </p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
