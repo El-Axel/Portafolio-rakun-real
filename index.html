@@ -6,7 +6,9 @@
 <title>Rakün Visual Design</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Carga no bloqueante: la fuente se baja en paralelo y no retrasa el render -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -155,103 +157,103 @@
         <div class="work-carousel-track" id="track-reels">
           <!-- Reel 1 -->
           <div class="work-slide is-reel" data-video-id="FoDb9ez1lPI" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/FoDb9ez1lPI"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="FoDb9ez1lPI">
+              <img src="https://i.ytimg.com/vi/FoDb9ez1lPI/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 2 -->
           <div class="work-slide is-reel" data-video-id="K1DCIZgtnxs" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/K1DCIZgtnxs"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="K1DCIZgtnxs">
+              <img src="https://i.ytimg.com/vi/K1DCIZgtnxs/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 3 -->
           <div class="work-slide is-reel" data-video-id="ny4WBdvZpKc" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/ny4WBdvZpKc"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="ny4WBdvZpKc">
+              <img src="https://i.ytimg.com/vi/ny4WBdvZpKc/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 4 -->
           <div class="work-slide is-reel" data-video-id="BbER2bIsap8" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/BbER2bIsap8"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="BbER2bIsap8">
+              <img src="https://i.ytimg.com/vi/BbER2bIsap8/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 5 -->
           <div class="work-slide is-reel" data-video-id="iS8h05fD9Uw" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/iS8h05fD9Uw"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="iS8h05fD9Uw">
+              <img src="https://i.ytimg.com/vi/iS8h05fD9Uw/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 6 -->
           <div class="work-slide is-reel" data-video-id="NqQEHzXv3pU" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/NqQEHzXv3pU"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="NqQEHzXv3pU">
+              <img src="https://i.ytimg.com/vi/NqQEHzXv3pU/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 7 -->
           <div class="work-slide is-reel" data-video-id="aTl2KQwa5dg" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/aTl2KQwa5dg"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="aTl2KQwa5dg">
+              <img src="https://i.ytimg.com/vi/aTl2KQwa5dg/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 8 -->
           <div class="work-slide is-reel" data-video-id="rlkpU8R4dfY" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/rlkpU8R4dfY"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="rlkpU8R4dfY">
+              <img src="https://i.ytimg.com/vi/rlkpU8R4dfY/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 9 -->
           <div class="work-slide is-reel" data-video-id="Dr49vCa60ug" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/Dr49vCa60ug"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="Dr49vCa60ug">
+              <img src="https://i.ytimg.com/vi/Dr49vCa60ug/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
           <!-- Reel 10 -->
           <div class="work-slide is-reel" data-video-id="dAo2UpFwqGk" data-type="vertical">
-            <iframe
-               src="https://www.youtube.com/embed/dAo2UpFwqGk"
-               title="Reel 1"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen>
-            </iframe>
+            <div class="yt-thumb" data-vid="dAo2UpFwqGk">
+              <img src="https://i.ytimg.com/vi/dAo2UpFwqGk/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -277,56 +279,98 @@
         <div class="work-carousel-track" id="track-youtube">
           <!-- YouTube 1 -->
           <div class="work-slide is-longform">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/7zZy1QTvokM?si=x0aUa-B8TmzB7CTs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
               YouTube 1
             </div>
           </div>
           <!-- YouTube 2 -->
           <div class="work-slide is-longform">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/vI3YV1Aizd4?si=fUwcSU2h7moiclvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
               YouTube 2
             </div>
           </div>
           <!-- YouTube 3 -->
           <div class="work-slide is-longform">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/28TGfTZweqw?si=TKsTjPfvKs4wwinN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
               YouTube 3
             </div>
           </div>
           <!-- YouTube 4 -->
           <div class="work-slide is-longform">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TP73qyFWDcY?si=ew52I3-w4htvmPAq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
               YouTube 4
             </div>
           </div>
           <!-- YouTube 5 -->
           <div class="work-slide is-longform">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/pVpnPAmRLkU?si=hmeNzM4C4RlH04tg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
               YouTube 5
             </div>
           </div>
           <!-- YouTube 6 -->
           <div class="work-slide is-longform">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sQhA2hdMTBs?si=z7ZMkQDRO7Th__qZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
               YouTube 6
             </div>
           </div>
           <!-- YouTube 6 -->
           <div class="work-slide is-longform">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/pg9x1_6OqjY?si=3dHfaO3NyXxnnk8C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M9 10l5 2.5L9 15z" fill="currentColor"/></svg>
               YouTube 6
             </div>
@@ -357,48 +401,84 @@
         <div class="work-carousel-track" id="track-cine">
           <!-- Cine 1 -->
           <div class="work-slide is-cine">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dAaUGrENSRQ?si=5MsLS6y8oYgY9l8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
               Cine 1
             </div>
           </div>
           <!-- Cine 2 -->
           <div class="work-slide is-cine">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yv687H7gZnk?si=M4blst2VbE3-yIBl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
               Cine 2
             </div>
           </div>
           <!-- Cine 3 -->
           <div class="work-slide is-cine">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/4RtfGuRQXYw?si=VfGJZwr6FB8N0qNJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
               Cine 3
             </div>
           </div>
           <!-- Cine 4 -->
           <div class="work-slide is-cine">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/WhC5CRB-LME?si=3nT2rWEjeYkBSHpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
               Cine 4
             </div>
           </div>
           <!-- Cine 5 -->
           <div class="work-slide is-cine">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/x8bgyfs9UeE?si=_giyvSrvwZ-Smywy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
               Cine 5
             </div>
           </div>
           <!-- Cine 6 -->
           <div class="work-slide is-cine">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VzGc5tcptno?si=8kj3_jRAZuUcB0wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="work-slide-empty">
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          <div class="work-slide-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
               Cine 6
             </div>
@@ -876,8 +956,14 @@
   <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Reproductor de video">
   <div class="modal-inner" id="modalInner">
     <button class="modal-close" id="closeModal" aria-label="Cerrar video">✕</button>
-    <iframe id="modalIframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-  </div>
+            <div class="yt-thumb" data-vid="7zZy1QTvokM">
+              <img src="https://i.ytimg.com/vi/7zZy1QTvokM/mqdefault.jpg"
+                   alt="Video" loading="lazy" decoding="async">
+              <button class="yt-play" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
 </div>
 </footer>
 

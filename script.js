@@ -401,3 +401,27 @@ document.addEventListener('keydown', (e) => {
     closeVideoModal();
   }
 });
+/* ============================================================
+   LAZY VIDEO THUMBNAILS — carga iframe solo al hacer clic
+   ============================================================ */
+
+document.querySelectorAll('.yt-thumb').forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    const vid = thumb.dataset.vid;
+    if (!vid) return;
+
+    // Si ya tiene un iframe activo, no hacer nada
+    if (thumb.querySelector('iframe')) return;
+
+    // Crear el iframe con autoplay
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${vid}?autoplay=1&rel=0`;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.title = 'Video';
+
+    // Ocultar la imagen y el botón, mostrar iframe
+    thumb.innerHTML = '';
+    thumb.appendChild(iframe);
+  });
+});
