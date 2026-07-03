@@ -1,4 +1,3 @@
-
 /* ============================================================
    TOKENS — Sistema de diseño Rakün
    ============================================================ */
@@ -92,6 +91,8 @@ body::before {
   background-size: 180px 180px;
   animation: grain 0.6s steps(2) infinite;
   mix-blend-mode: overlay;
+  pointer-events: none;
+  opacity: 0.03;   /* bajalo un poco */
 }
 
 @keyframes grain {
@@ -239,25 +240,65 @@ body::before {
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 768px) {
-  .nav { padding: 1rem var(--space-sm); }
-  .nav-toggle { display: flex; }
+  /* Nav bar */
+  .nav {
+    padding: 0.75rem var(--space-sm);
+    min-height: 60px;
+  }
 
+  /* Logo más pequeño en mobile */
+  .nav-logo img {
+    height: 36px !important;
+    width: auto;
+  }
+
+  /* Botón hamburguesa — siempre encima del overlay */
+  .nav-toggle {
+    display: flex;
+    position: relative;
+    z-index: 600;
+    padding: 8px;
+    margin: -8px;
+    touch-action: manipulation;
+  }
+
+  /* Overlay del menú */
   .nav-links {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(13,12,26,0.97);
+    background: rgba(13,12,26,0.98);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    font-size: 1.5rem;
     transform: translateX(100%);
-    transition: transform 0.4s var(--ease);
-    z-index: 450;
+    transition: transform 0.35s var(--ease);
+    z-index: 550;
+    list-style: none;
   }
 
   .nav-links.open { transform: translateX(0); }
-  .nav-links a { font-size: 1.1rem; color: var(--color-white); }
+
+  /* Links grandes y fáciles de tocar */
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    letter-spacing: 0.06em;
+    padding: 0.6rem 2rem;
+    touch-action: manipulation;
+  }
+
+  .nav-links a:active {
+    color: var(--color-pink);
+  }
 }
 
 /* WhatsApp flotante */
@@ -394,6 +435,8 @@ body::before {
   background: linear-gradient(to bottom, var(--color-pink), transparent);
 }
 
+
+
 @keyframes scrollBounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50%  { transform: translateX(-50%) translateY(8px); }
@@ -457,7 +500,100 @@ body::before {
   z-index: 1;
 }
 
-.section-alt { background: var(--color-dark); }
+.section-alt { background: #f0edf8; }
+
+/* ============================================================
+   PLANES — versión positivo (fondo claro)
+   ============================================================ */
+
+/* Textos generales */
+.section-alt .section-tag { color: var(--color-pink); }
+.section-alt .section-title { color: #1a1730; }
+.section-alt .section-title em { color: var(--color-pink); }
+.section-alt .section-desc { color: rgba(26,23,48,0.6); }
+
+/* Divisor */
+.section-alt .plans-divider { color: rgba(26,23,48,0.5); }
+.section-alt .plans-divider::before,
+.section-alt .plans-divider::after { background: rgba(26,23,48,0.15); }
+
+/* Tarjetas de planes */
+.section-alt .plan-card {
+  background: #ffffff;
+  border-color: rgba(26,23,48,0.12);
+  box-shadow: 0 4px 24px rgba(26,23,48,0.07);
+}
+.section-alt .plan-card:hover {
+  border-color: var(--color-pink);
+  box-shadow: 0 16px 48px rgba(26,23,48,0.14);
+}
+.section-alt .plan-card.featured {
+  border-color: var(--color-pink);
+  background: linear-gradient(160deg, rgba(255,44,104,0.06) 0%, #ffffff 60%);
+}
+.section-alt .plan-card-name { color: #1a1730; }
+.section-alt .plan-card-tagline { color: rgba(26,23,48,0.55); }
+.section-alt .plan-card-group-label { color: var(--color-blue); }
+.section-alt .plan-card-list li { color: #1a1730; }
+.section-alt .plan-card-note { color: rgba(26,23,48,0.45); }
+.section-alt .plan-card-before { color: rgba(26,23,48,0.4); }
+.section-alt .plan-card-total { color: #1a1730; }
+.section-alt .plan-card-permonth { color: rgba(26,23,48,0.5); }
+.section-alt .plan-card-price-row { border-top-color: rgba(26,23,48,0.1); }
+
+/* Calculadora — panel */
+.section-alt .calc-panel {
+  background: #ffffff;
+  border-color: rgba(26,23,48,0.12);
+  box-shadow: 0 4px 24px rgba(26,23,48,0.07);
+}
+.section-alt .calc-title { color: #1a1730; }
+.section-alt .calc-group {
+  border-color: rgba(26,23,48,0.12);
+  background: rgba(26,23,48,0.02);
+}
+.section-alt .calc-group-name { color: #1a1730; }
+.section-alt .calc-group-price { color: rgba(26,23,48,0.5); }
+.section-alt .calc-counter-num { color: var(--color-pink); }
+.section-alt .calc-counter-unit { color: rgba(26,23,48,0.5); }
+.section-alt .calc-counter-btn {
+  border-color: rgba(26,23,48,0.2);
+  color: #1a1730;
+}
+.section-alt .calc-mini-label { color: rgba(26,23,48,0.5); }
+.section-alt .calc-label { color: #1a1730; }
+.section-alt .calc-divider { background: rgba(26,23,48,0.1); }
+.section-alt .calc-toggle {
+  border-color: rgba(26,23,48,0.25);
+  color: #1a1730;
+  background: rgba(26,23,48,0.04);
+}
+.section-alt .calc-toggle.active {
+  color: #1a1730;
+  background: rgba(53,158,178,0.15);
+  border-color: var(--color-blue);
+}
+.section-alt .calc-toggle.level.active {
+  background: rgba(255,237,88,0.25);
+  border-color: #b8a800;
+  color: #1a1730;
+}
+.section-alt .calc-group-price { color: #1a1730; font-weight: 600; }
+.section-alt .calc-counter-unit { color: #1a1730; }
+.section-alt .calc-mini-label { color: rgba(26,23,48,0.7); }
+.section-alt .calc-level-row.is-disabled { opacity: 0.3; }
+
+/* Panel resultado */
+.section-alt .result-panel {
+  background: linear-gradient(135deg, rgba(255,44,104,0.06) 0%, rgba(53,158,178,0.06) 100%);
+  border-color: rgba(255,44,104,0.25);
+  box-shadow: 0 4px 24px rgba(26,23,48,0.07);
+}
+.section-alt .result-label { color: rgba(26,23,48,0.5); }
+.section-alt .result-total { color: #1a1730; }
+.section-alt .result-note { color: rgba(26,23,48,0.5); }
+.section-alt .result-line { color: rgba(26,23,48,0.55); border-bottom-color: rgba(26,23,48,0.1); }
+.section-alt .result-line strong { color: #1a1730; }
 
 .section-header {
   text-align: center;
@@ -1607,3 +1743,52 @@ body::before {
   }
 }
 
+/* ============================================================
+   THUMBNAILS, BOTÓN PLAY Y AJUSTES DEL MODAL
+   ============================================================ */
+.work-slide { 
+  cursor: pointer; 
+  overflow: hidden; 
+}
+
+.work-slide-thumb {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease), filter 0.5s var(--ease);
+  filter: brightness(0.7); /* Se ve oscurito para dar dramatismo */
+}
+
+.work-slide:hover .work-slide-thumb {
+  transform: scale(1.05);
+  filter: brightness(1); /* Se ilumina al pasar el mouse */
+}
+
+.work-slide-play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 60px; height: 60px;
+  background: var(--color-pink);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(255, 44, 104, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.work-slide-play svg { 
+  width: 24px; height: 24px; 
+  margin-left: 4px; /* Centra visualmente el triángulo del play */
+}
+
+.work-slide:hover .work-slide-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modificador para que el Modal se adapte a Reels (Vertical) */
+.modal-inner.is-vertical {
+  max-width: 420px;
+  aspect-ratio: 9/16;
+}

@@ -2,6 +2,7 @@
    RAKÜN VISUAL DESIGN — script.js
    ============================================================ */
 
+   
 /* --- Navegación scroll --- */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -350,3 +351,53 @@ const observer  = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
 revealEls.forEach(el => observer.observe(el));
+
+/* ============================================================
+   VIDEO POPUP (MODAL) LOGIC
+   ============================================================ */
+const modal = document.getElementById('videoModal');
+const modalInner = document.getElementById('modalInner');
+const modalIframe = document.getElementById('modalIframe');
+const closeModalBtn = document.getElementById('closeModal');
+
+// Escuchar clics en todos los slides que tengan un data-video-id
+document.querySelectorAll('.work-slide[data-video-id]').forEach(slide => {
+  slide.addEventListener('click', () => {
+    const videoId = slide.dataset.videoId;
+    const isVertical = slide.dataset.type === 'vertical';
+
+    // Ajustar el formato del modal si es Reel o YouTube
+    if (isVertical) {
+      modalInner.classList.add('is-vertical');
+    } else {
+      modalInner.classList.remove('is-vertical');
+    }
+
+    // Inyectar el link de YouTube con autoplay activado
+    modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    
+    // Mostrar modal y bloquear el scroll de fondo
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+// Función para cerrar
+function closeVideoModal() {
+  modal.classList.remove('open');
+  modalIframe.src = ''; // Limpiar el src detiene la reproducción de YouTube
+  document.body.style.overflow = '';
+}
+
+// Cerrar al hacer clic en la "X", en el fondo negro o presionando "Escape"
+if(closeModalBtn) closeModalBtn.addEventListener('click', closeVideoModal);
+if(modal) {
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeVideoModal();
+  });
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
+    closeVideoModal();
+  }
+});
